@@ -1,0 +1,270 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}    % Поддержка UTF-8
+\usepackage[T2A]{fontenc}      % Кириллическая кодировка
+\usepackage[russian]{babel}    % Русский язык
+\usepackage{amsmath, amssymb}
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{fancyhdr}          % Для кастомных заголовков
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\geometry{top=2cm, bottom=2cm, left=1cm, right=2cm}
+\setlength{\parindent}{0pt}
+
+\thispagestyle{empty}
+\begin{document}
+\begin{minipage}{0.25\textwidth}
+\vspace{-15cm}
+\begin{tikzpicture}[scale=1.3][t]
+  \coordinate (D) at (0, 0)
+    \coordinate (C) at (4, 0)
+    \coordinate (B) at (2, 3.464)
+    \coordinate (A) at (2, 0);
+    \fill[yellow!100] (1.8, 0) -- (2.8, 0) arc (0:180:0.8) -- cycle;
+    \fill[orange!100] (2, 0) -- (2.8,0) arc (0:90:0.8) -- cycle;
+    \draw[line width=1.2mm, NavyBlue] (B) -- (A);
+    \draw[line width=1.2mm, Bittersweet] (B) -- (C);
+    \draw[line width=1.2mm, black] (A) -- (C);
+    \draw[dashed, line width=1.2mm, black] (D) -- (A);
+    \draw[dashed,line width=1.2mm, Bittersweet] (D) -- (B);
+
+    \node[below left] at (D) {\small{D}};
+    \node[above] at (B) {\small{B}};
+    \node[below right] at (C) {\small{C}};
+    \node[below] at (A) {\small{A}};
+\end{tikzpicture}
+\end{minipage}
+\hspace{0.1cm}
+\hspace{2cm}
+\begin{minipage}{0.65\textwidth}
+\textbf{74}
+\hspace{1 cm}
+\textsc{\textbf{КНИГА I ПРЕДЛ. XLVIII. ТЕОРЕМА}}\\
+\begin{wrapfigure}[]{l}{2cm}
+    \vspace{-0.5cm}
+    \includegraphics[width=2cm]{ff.png} % Путь к файлу изображения
+\end{wrapfigure}
+\textit{сли в треугольнике квадрат одной стороны} 
+\begin{tikzpicture}
+  % Рисуем отрезок
+  \draw[line width = 0.1cm, orange] (0,0) -- ++ (1.5,0);  % отрезок с сдвигом
+  \node[above]{B};
+  \node[above] at (1.5, 0){C};
+\end{tikzpicture}
+\textit{равен сумме квадратов двух других сторон}
+\begin{tikzpicture}
+    \draw[line width = 0.1cm, blue] (0,0) -- ++ (2,0);
+    \node[above]{A};
+    \node[above] at (2, 0){B};
+\end{tikzpicture}
+\textit{и}
+\begin{tikzpicture}
+    \draw[line width = 0.1cm, black] (0,0) -- ++ (2,0);
+    \node[above]{A};
+    \node[above] at (2, 0){C};
+\end{tikzpicture}
+\textit{, то угол}
+\begin{tikzpicture}
+    \fill[orange!100](0,0) -- (1,0) arc(0:90:1) -- cycle;
+    \node at (-0.07, 1.1) {\tiny{B}};
+    \node at (-0.2,-0.1) {\tiny{A}};
+    \node at (1.2, -0.05)  {\tiny{C}};
+\end{tikzpicture}
+\textit{, заключенный между этими двумя сторонами и прямой.}
+
+\vspace{0.3cm}
+\begin{center}
+
+
+Проведем 
+ \begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, black] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {D};
+\end{tikzpicture}
+$\perp$
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {B};
+\end{tikzpicture} \\
+и \textbf{=}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {C};
+\end{tikzpicture} 
+(пр.)\\
+также проведем 
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {D};
+\end{tikzpicture} \\
+\vspace{0.7cm}
+Поскольку 
+\begin{tikzpicture}
+    \draw[dashed,line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {D};
+\end{tikzpicture} 
+=
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {C};
+\end{tikzpicture} 
+(постр.)\\
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {D};
+     \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{=}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {C};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+;\\
+\vspace{0.7cm}
+\therefore
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, black] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {D};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{+}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {B};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{=}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, black] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {C};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{+}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {B};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} \\
+\vspace{0.7cm}
+но
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, black] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {D};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{+}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {B};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{=}
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {D};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+(пр.I.47), \\
+и 
+\begin{tikzpicture}
+    \draw[line width=0.1cm, black] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {C};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{+}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, blue] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){A};
+    \node at (1.5, -0.15) {B};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{=}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {C};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+(гип.)\\
+\vspace{0.7cm}
+\therefore
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {D};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture} 
+\large{=}
+\begin{tikzpicture}
+    \draw[line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {C};
+    \node at (1.7, 0.1) {\tiny{2}};
+\end{tikzpicture}, \\
+\therefore
+\begin{tikzpicture}
+    \draw[dashed, line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {D};
+\end{tikzpicture} 
+\large{=}
+\begin{tikzpicture}
+\draw[line width=0.1cm, orange] (0,-0.5) -- ++ (1.5, 0);
+    \node at (0,-0.15){B};
+    \node at (1.5, -0.15) {C};
+\end{tikzpicture}; \\
+\vspace{0.7cm}
+и 
+\therefore
+\begin{tikzpicture}
+        \fill[yellow!100](1,0) -- (0,0) arc(180:90:1) -- cycle;
+        \node at (1.1, 1.1) {\tiny{B}};
+        \node at (-0.2,-0.1) {\tiny{D}};
+        \node at (1.2, -0.05)  {\tiny{A}};
+\end{tikzpicture}
+\large{=}
+\begin{tikzpicture}
+        \fill[orange!100](0,0) -- (1,0) arc(0:90:1) -- cycle;
+            \node at (-0.07, 1.1) {\tiny{B}};
+    \node at (-0.2,-0.1) {\tiny{A}};
+    \node at (1.2, -0.05)  {\tiny{C}};
+\end{tikzpicture}
+(пр.I.8),\\
+следовательно 
+\begin{tikzpicture}
+        \fill[orange!100](0,0) -- (1,0) arc(0:90:1) -- cycle;
+            \node at (-0.07, 1.1) {\tiny{B}};
+    \node at (-0.2,-0.1) {\tiny{A}};
+    \node at (1.2, -0.05)  {\tiny{C}};
+\end{tikzpicture}
+прямой угол
+\end{center}
+\end{minipage}
+\vspace{1cm}
+\begin{flushright}
+\textbf{ч.т.д.}
+\end{flushright}
+
+\end{document}
